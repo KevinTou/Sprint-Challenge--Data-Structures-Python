@@ -23,6 +23,7 @@ for name in enumerate(names_1):
     if name[1] in names_2:
         duplicates.append(name[1])
 
+
 end_time = time.time()
 print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print(f"runtime: {end_time - start_time} seconds")
@@ -31,3 +32,6 @@ print(f"runtime: {end_time - start_time} seconds")
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish with no restrictions on techniques or data
 # structures?
+
+# Optimized ~0.007 seconds (Not ordered)
+# duplicates = list(set(names_1).intersection(names_2))
